@@ -1,2 +1,4 @@
 # Python-For-Finance
-Python scripts, my journey through learning python for quantitative trading analysis 
+Python scripts, my journey learning python for quantitative trading analysis.
+
+
