@@ -69,47 +69,52 @@ import sys
 import random
 from enum import Enum
 
-class RPS(Enum):
-    ROCK = 1
-    PAPER = 2
-    SCISSORS = 3
+def rock_paper_scissors():
+    class RPS(Enum):
+        ROCK = 1
+        PAPER = 2
+        SCISSORS = 3
 
-playagain = True
+    playagain = True
 
-while playagain:
+    while playagain:
 
 
-    print(" ")
-    playerchoice = input("Enter ... \n1 for Rock, \n2 for Paper or \n3 for Scissors:\n")
-    player = int(playerchoice)
+        print(" ")
+        playerchoice = input("Enter ... \n1 for Rock, \n2 for Paper or \n3 for Scissors:\n")
+        player = int(playerchoice)
 
-    if player < 1 or player > 3: 
-        sys.exit("Invalid choice, enter 1/2/3") 
+        if player < 1 or player > 3: 
+            sys.exit("Invalid choice, enter 1/2/3") 
 
-    computerchoice = random.choice("123")
-    computer = int(computerchoice)
+        computerchoice = random.choice("123")
+        computer = int(computerchoice)
 
-    print("")
-    print("You chose: " + str(RPS(player)).replace("RPS." , "") + ".")
-    print("Python chose: " + str(RPS(computer)).replace("RPS." , "") + ".")
-    print("")
+        print("")
+        print("You chose: " + str(RPS(player)).replace("RPS." , "") + ".")
+        print("Python chose: " + str(RPS(computer)).replace("RPS." , "") + ".")
+        print("")
 
-    if player == 1 and computer == 3: 
-        print("You win")
-    elif player == 2 and computer == 1: 
-        print("you win")
-    elif player == 3 and computer == 2: 
-        print("you win")
-    elif player == computer:
-        print("It's a draw!")
-    else:
-        print ("Python WINS!")
+        if player == 1 and computer == 3: 
+            print("You win")
+        elif player == 2 and computer == 1: 
+            print("you win")
+        elif player == 3 and computer == 2: 
+            print("you win")
+        elif player == computer:
+            print("It's a draw!")
+        else:
+            print ("Python WINS!")
 
-    playagain = input("\nDo you want to play again? \n(yes/no): ")
-    if playagain.lower() == "no":
-        playagain = False
-        print("\nThanks for playing!")
-    else: 
-        print("\nLet's play again!")
-
+        playagain = input("\nDo you want to play again? \n(yes/no): ")
+        if playagain.lower() == "no":
+            playagain = False
+            print("\nThanks for playing!")
+        else: 
+            print("\nLet's play again!")
+            
+            
 sys.exit("Bye!")
+
+rock_paper_scissors()
+
