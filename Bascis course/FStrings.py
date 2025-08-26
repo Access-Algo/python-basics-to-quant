@@ -117,6 +117,7 @@ def rps():
     return rock_paper_scissors()
 
 
-play = rps()  # Uncomment to play the game
+rock_paper_scissors = rps()  # Uncomment to play the game
 
-play()
+if __name__ == "__main__":
+    rock_paper_scissors()   
